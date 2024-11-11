@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport">
+	<title>It's our home ~</title>
+	<link rel="icon" href="https://img0.baidu.com/it/u=3376465807,2303826080&fm=253&fmt=auto&app=138&f=PNG?w=342&h=342"
+		type="image/gif">
+	<style>
+		body {
+			background-color: #FFFFCC;
+		}
+		/* 输入占位文本颜色 */
+		#input-color::-webkit-input-placeholder {
+			color: #c04040;
+			opacity: 0.3;
+		}
+	</style>
+	<style>
+		.center-align {
+			width: 505px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 16px;
+		}
+		.position {
+			width: 505px;
+			height: 400px;
+			cursor: url(../asset/cursor1.jpg), default;
+		}
+	</style>
+	<!-- 导航栏样式： -->
+	<style>
+		ul.Bar {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			overflow: hidden;
+			background-color: green;
+			margin-bottom: 10px;
+			li {
+				float: left;
+				width: 100px;
+			}
+			li a:link,li a:visited,.dropbtn {
+				display: block;
+				text-decoration: none;
+				color: aliceblue;
+				font-weight: 700;
+				text-align: center;
+				padding: 5px;
+			}
+			.dropbtn {
+				width: 90px;
+				cursor: pointer;
+			}
+			li a:hover,
+
+			.dropbtn:hover {
+				background-color: rgb(2, 180, 2);
+			}
+			.dropdown {
+					display: inline-block;
+				}
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				min-width: 100px;
+				box-shadow: 5px 5px 20px 2px gray;
+				a {
+					display: block;
+					text-decoration: none;
+					color: black;
+					padding: 12px 16px;
+				}
+				a:hover {
+					background-color: rgb(193, 198, 198);
+				}
+			}
+			.dropdown:hover .dropdown-content {
+				display: block;
+			}
+		}
+	</style>
+	<!-- 搜索框样式-->
+	<style>
+			.searchBaidu {
+				border: 5px solid pink;
+				width: 300px;
+				clear: both;
+				margin: 0 auto;
+			}
+		
+			#searchSubmit {
+				display: block;
+				padding: 6px;
+				width: 80px;
+				margin: 0 auto;
+				margin-top: 20px;
+			}
+	</style>
+	<!--返回顶部按钮+动画效果-->
+	<style>
+			.box1 {
+				width: 50px;
+				height: 50px;
+				background-color: rgb(110, 186, 253);
+				border-radius: 10%;
+				animation: myfirst 3s linear 0s 1 normal;
+				animation-fill-mode: both;
+				position: fixed;
+				display: none;
+		
+				img {
+					width: 50px;
+					height: 50px;
+				}
+			}
+		
+			@keyframes myfirst {
+				0% {
+					top: 5%;
+					right: 30%;
+				}
+		
+				10% {
+					top: 20%;
+					right: 30%;
+				}
+		
+				15% {
+					top: 17%;
+					right: 30%;
+				}
+		
+				20% {
+					top: 20%;
+					right: 30%;
+				}
+		
+				25% {
+					top: 20%;
+					right: 30%;
+				}
+		
+				100% {
+					top: 20%;
+					right: 0px;
+					transform: rotate(360deg);
+					background-color: aquamarine;
+				}
+			}
+	</style>
+	<!-- 实时时钟+倒计时器 -->
+	<style>
+			#clock {
+				clear: both;
+				position: absolute;
+				left: 20px;
+			}
+		
+			#nianyueri {
+				font-size: 35px;
+				color: aqua;
+				text-shadow: 1px 1px 5px gray;
+			}
+		
+			#shifenmiao {
+				font-size: 20px;
+				color: aqua;
+			}
+		
+			#coming {
+				font-size: 20px;
+				color: aqua;
+			}
+	</style>
+
+</head>
+
+<body>
+
+	<p id="e1" hidden="hidden">点击“确定”进入</p>
+	<!-- 导航栏 -->
+	<div>
+        <ul class="Bar">
+            <li><a href="https://www.bilibili.com/" target="_blank">b站</a></li>
+            <li><a href="https://www.baidu.com/" target="_blank">百度</a></li>
+            <li><a href="https://www.douyin.com/user/self?showTab=like" target="_blank">抖音</a></li>
+            <li><a href="https://weibo.com/u/7795649284" target="_blank">微博</a></li>
+			<li><a href="https://www.huya.com/" target="_blank">虎牙</a></li>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">想看的</a>
+                <div class="dropdown-content">
+                    <a target="_blank" href="https://www.douyin.com/user/MS4wLjABAAAA9GohK5PQafE6oAT5AHeEML3sMcGRxVvRAgi3aDOKuEHCGluzMeReKDrEMrE1CXsO?is_search=0&list_name=follow&nt=2">娱乐小灶</a>
+                    <a target="_blank" href="https://www.douyin.com/user/MS4wLjABAAAALkUQxVdBYKo8XRku1Rfsv7mmTlz3y6C62x2H6Q31Huo?is_search=0&list_name=follow&nt=11">OK了</a>
+                    <a target="_blank" href="https://www.douyin.com/user/MS4wLjABAAAA58AFQVygQ3MfiCpOXp-RTUqdyHY-oVSJQHsyWhg4S78?is_search=0&list_name=follow&nt=0">陈泽-</a>
+					<a target="_blank" href="https://www.douyin.com/user/MS4wLjABAAAAiL0kRbxL-vErlkJX3g4eRNPiNFwLxd8v8dtLTR5C_0HXonhSgyMAfNNA76cc1nbk?vid=7398827424982650153">邪恶四眼</a>
+				</div>
+            </div>
+        </ul>
+    </div>
+
+	<audio controls style="float: right;" id="audioPlayer"></audio>
+
+	<div id="clock">
+		<div id="nianyueri"></div>
+		<div id="shifenmiao"></div>
+		<div id="coming"></div>
+	</div>
+
+	<div class="searchBaidu">
+		<form action="https://www.baidu.com/s?" target="_blank">
+			baidu search：<input id="input-color" type="search" placeholder="喜欢什么搜什么" name="wd">
+			<button id="searchSubmit" type="submit">搜索</button>
+		 </form>
+	</div>
+	<!-- 返回顶部 -->
+	<div class="box1">
+		<a href="#">
+			<img src="/asset/rocket.webp" alt="">
+		</a>
+	</div>
+
+	<div class="center-align">
+		<img class="position" 
+		src="../asset/maptest1.webp"
+		alt="加载失败~" 
+		usemap="#homespace">
+	</div>
+	<map name="homespace">
+		<area shape="circle" coords="154,169,15" alt="百度一下~" href="https://www.baidu.com/" target="_blank">
+		<area shape="circle" coords="240,165,15" alt="W3Cschool~" href="https://www.w3cschool.cn/" target="_blank">
+		<area shape="rect" coords="171,278,237,301" alt="看看你的~" href="https://www.douyin.com/user/self?showTab=like"
+			target="_blank">
+	</map>
+	
+
+
+	<!-- 实时时钟+倒计时器 -->
+	<script>
+		function upDateClock(){
+			
+			var myClock = new Date();
+			var myYear = myClock.getFullYear();
+			var myMonth = myClock.getMonth() + 1;
+			var myDate = myClock.getDate();
+			var myHour = myClock.getHours();
+			var myMinute = myClock.getMinutes();
+			var mySecond = myClock.getSeconds();
+
+			myHour = (myHour < 10) ? "0" + myHour : myHour;
+			myMinute = (myMinute < 10) ? "0" + myMinute : myMinute;
+			mySecond = (mySecond < 10) ? "0" + mySecond : mySecond;
+
+			var wholeTime = myYear + "/" + myMonth + "/" + myDate;
+			var detailTime = myHour + ":" + myMinute + ":" + mySecond;
+
+			document.getElementById("nianyueri").innerHTML = wholeTime;
+			document.getElementById("shifenmiao").innerHTML = detailTime;
+
+		}
+		upDateClock();
+		setInterval(upDateClock,1000);
+
+		function comingDay(){
+			var today = new Date();
+			today.setHours(0);
+			today.setMinutes(0);
+			today.setSeconds(0);
+			today.setMilliseconds(0);
+			var rememberDay = new Date(2023,7,26);
+			var result = today.getTime() - rememberDay.getTime();
+			result = result/(1000*60*60*24);
+			var finalWord = "已经在一起" + result + "天了！";
+			document.getElementById("coming").innerHTML = finalWord;
+		}
+		comingDay();
+	</script>
+	<!-- 滚动条移动触发返回顶部按键 -->
+	<script>
+		function toTop(){
+			var x = document.body.scrollTop || document.documentElement.scrollTop;
+			if(x > 0){
+				document.getElementsByClassName("box1")[0].style.display = "block";
+			}else{
+				document.getElementsByClassName("box1")[0].style.display = "none";
+			}
+		}
+		window.onscroll = toTop;
+	</script>
+
+	<!-- 播放器多条播放 -->
+	<script>
+		var playList = [
+			
+			'/asset/T-ara - Falling U.flac'
+		];
+		var currentIndex = 0;
+		var audioplayer = document.getElementById("audioPlayer");
+		function playNextmusic(){
+			if(currentIndex < playList.length){
+				audioplayer.src = playList[currentIndex];
+				currentIndex++;
+			}else{
+				currentIndex = 0;
+				playNextmusic();
+			}
+		}
+		audioplayer.addEventListener("ended",playNextmusic);
+		playNextmusic();
+
+	</script>
+</body>
+
+<!-- <script>
+	alert(document.getElementById("e1").firstChild.nodeValue);
+</script> -->
+
+</html>
